@@ -19,20 +19,41 @@ export const SendButton = (props: SendButtonProps) => {
                 'py-2 px-4 justify-center font-semibold text-white focus:outline-none flex items-center disabled:opacity-50 disabled:cursor-not-allowed disabled:brightness-100 transition-all filter hover:brightness-90 active:brightness-75 chatbot-button ' +
                 props.class
             }
-
-            style={{ background: 'transparent', border: 'none' }}>
-            {<Show when={!props.isLoading} > 
-        <SendIcon color={props.sendButtonColor} class={'send-icon flex ' + (props.disableIcon ? 'hidden' : '')}/>
-        </Show>
-}
-            
-
-            {/* { <Show when={!props.isLoading} fallback={<Spinner class='text-white' />}>
-                <SendIcon color={props.sendButtonColor} class={'send-icon flex ' + (props.disableIcon ? 'hidden' : '')}/>
-            </Show> } */}
+            style={{ background: 'transparent', border: 'none' }}
+        >
+            {!props.isLoading && (
+                <SendIcon
+                    color={props.sendButtonColor}
+                    class={'send-icon flex' + (props.disableIcon ? ' hidden' : '')}
+                />
+            )}
         </button>
     )
 }
+
+
+
+// export const SendButton = (props: SendButtonProps) => {
+//     return (
+//         <button
+//             type='submit'
+//             disabled={props.isDisabled || props.isLoading}
+//             {...props}
+//             class={
+//                 'py-2 px-4 justify-center font-semibold text-white focus:outline-none flex items-center disabled:opacity-50 disabled:cursor-not-allowed disabled:brightness-100 transition-all filter hover:brightness-90 active:brightness-75 chatbot-button ' +
+//                 props.class
+//             }
+
+//             style={{ background: 'transparent', border: 'none' }}>
+//             {<Show when={!props.isLoading} > 
+//         <SendIcon color={props.sendButtonColor} class={'send-icon flex' + (props.disableIcon ? 'hidden' : '')}/>
+//         </Show>}
+//             {/* { <Show when={!props.isLoading} fallback={<Spinner class='text-white' />}>
+//                 <SendIcon color={props.sendButtonColor} class={'send-icon flex ' + (props.disableIcon ? 'hidden' : '')}/>
+//             </Show> } */}
+//         </button>
+//     )
+// }
 
 // export const Spinner = (props: JSX.SvgSVGAttributes<SVGSVGElement>) => (
 //     <svg
