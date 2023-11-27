@@ -19,7 +19,7 @@ export const SendButton = (props: SendButtonProps) => {
                 'py-2 px-4 justify-center font-semibold text-white focus:outline-none flex items-center disabled:opacity-50 disabled:cursor-not-allowed disabled:brightness-100 transition-all filter hover:brightness-90 active:brightness-75 chatbot-button ' +
                 props.class
             }
-            style={{ background: 'white', border: 'none' }}
+            style={{ background: '#fffffff', border: 'none' }}
         >
             {!props.isLoading && (
                 <SendIcon
