@@ -30,7 +30,7 @@ export type BotMessageTheme = {
 
 export type ChatWindowTheme = {
     welcomeMessage?: string
-    backgroundColor?: "#ffffff"
+    backgroundColor?: "#FFFFFF"
     height?: number
     width?: number
     fontSize?: number

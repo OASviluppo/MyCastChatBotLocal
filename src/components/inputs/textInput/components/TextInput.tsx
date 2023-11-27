@@ -13,7 +13,7 @@ type Props = {
     onSubmit: (value: string) => void
 }
 
-const defaultBackgroundColor = '#ffffff'
+const defaultBackgroundColor = '#FFFFFF'
 const defaultTextColor = '#303235'
 
 export const TextInput = (props: Props) => {
